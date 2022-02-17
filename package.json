@@ -1,0 +1,15 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "My Minor project for Coding Ninjas i.e ToDoList using express, Node, Monodb",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vaibhav kharbanda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

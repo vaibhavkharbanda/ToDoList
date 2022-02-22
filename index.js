@@ -5,10 +5,12 @@ const port= 8000;
 
 //use express routes
 app.use('/',require('./routes'));
+app.use(express.urlencoded());
+app.use(express.static('assets'));
 
 
 //setup the view engine
-app.set('views engine', 'ejs');
+app.set('view engine', 'ejs');
 app.set('views','./views'); 
 
 

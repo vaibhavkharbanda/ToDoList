@@ -1,0 +1,144 @@
+/*-------OverAll css -------*/
+body{
+    font-family: 'Raleway', sans-serif;
+    background: rgb(203,255,254);
+    /* background-size: 100%; */
+    /* background: linear-gradient(133deg, rgba(203,255,254,1) 0%, rgba(194,220,255,1) 72%); */
+}
+#toDoList{
+    background-color: white;
+    transform: translate(0, 10%);
+    width: 25vw;
+    min-height: 70vh;
+    box-shadow: 1px 1px 20px grey;
+    /* border: 1px soli0 black; */
+    margin: auto;
+}
+/*-------Uppar Part---------*/
+#listHeading{
+    margin: 0%;
+    text-align: center;
+    padding-top: 3%;
+}
+#outputContainer{
+    max-height: 35%;
+    background: linear-gradient(90deg, rgba(75,94,255,1) 0%, rgba(245,187,255,1) 96%);
+}
+#inputContainer{
+    margin-top: 3%;
+    width: 100%;
+}
+#list{
+    position: inherit;
+    background-color: whitesmoke;
+    margin:-10% 6%;
+    box-shadow: 1px 1px 10px lightgray;
+    min-height: 50vh;
+}
+#formContainer{
+    /* margin-top: -13%; */
+    position: relative;
+    text-align: center;
+
+}
+#addTask{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    /* height: 100%; */
+}
+#addToDo{
+    padding: 10px;
+    border: none;
+    box-shadow: 1px 1px 10px lightgray;
+    font-size: 1.5rem;
+    border-radius:6px ;
+    
+}
+
+#taskDetails{
+    display: flex;
+    justify-content: space-around;
+    margin: 2% auto;
+}
+
+#taskCategory{
+    background-color: white;
+    border-right: 1px solid grey;
+    width: 50%;
+    padding: 3%;
+}
+
+#dueDate{
+    background-color: white;
+    border: none;
+    width: 50%;
+    padding: 3%;
+}
+
+
+#dateContainer{
+    margin: -3% auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+#date{
+    font-weight: 1000;
+    color: yellow;
+}
+
+
+#plusFont:hover{
+    color: whitesmoke;
+}
+
+
+.task{
+    padding: 5%;
+    margin:4% auto;
+    background-color: white;
+    width:90%;
+    height: 10%;
+    box-shadow: 2px 2px 7px lightgray;
+    display: flex;
+    flex-wrap: nowrap;
+    /* justify-content: space-around; */
+
+}
+
+.fa-square-minus{
+    width: 20%;
+    align-items: center ;
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 7%;
+}
+#plusFont{
+    width: 20%;
+    align-items: center ;
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 7%;
+    
+}
+
+.taskLabel{
+    margin: auto 0;
+    font-size: 1.4rem;
+    /* width:70% */
+}
+
+.task:hover >.fa-trash{
+    display: inline-block !important;
+    
+}
+
+.fa-trash{
+    display: none !important; 
+    padding:5px;
+    margin:auto auto auto 50%;
+}
+
+

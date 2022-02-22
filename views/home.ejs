@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="index.css">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-		integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-	
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
 </head>
+
 <body>
     <div id="toDoList">
         <div id="outputContainer">
-            <div id="formContainer">
-                <form action="" id="addTask">
-                    <input type="text" id="addToDo" placeholder="Type To-Do List"><i class="fas fa-plus-square" id="plusFont"></i>
-
-
-                </form>
-            </div>
+            <h2 id="listHeading">To Do List </h2>
             <div id="dateContainer">
-                <h2 id="date"></h3>
-                <div id="monthYear">
-                    <h4 id="month">Dec</h4>
-                    <h5 id="year"></h5>
-                </div>
-                <div id="action">
-                    <a href="" id="delAll"> Delete All</a>
-                    <!-- <a href="" id="delSelected"> Delete Selected</a> -->
-                </div>
+                <p id="date">22</p>&nbsp;
+                <p id="month">Feb</p>&nbsp;
+                <p id="year">2022</p>
+
+
+            </div>
+            <div id="formContainer">
+                <form action="" id="">
+                    <span id="addTask">
+                        <input type="text" id="addToDo" placeholder="Type To-Do List">
+                    </span>
+
+                    <span id="taskDetails">
+                        <select name="Category" id="taskCategory">
+                            <option value="" disabled selected>Task Category</option>
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="school">School</option>
+                            <option value="reminder">Reminder</option>
+                        </select>
+                        <input type="date" id="dueDate" placeholder="Due Date">
+                    </span>
+                </form>
+                <i class="fas fa-plus-square" id="plusFont"></i>
+                <i class="fa-duotone fa-square-minus"></i>
+
             </div>
         </div>
         <div id="inputContainer">
             <div id="list">
-                <br>           
-                
-                
-
+                <br>
+                <div class="task"">
+                    <label for="taskName" class="taskLabel"><input type="checkbox" class="taskCheck"> &nbsp; taskdata</label>
+                </div>
             </div>
         </div>
     </div>
@@ -49,11 +65,12 @@
 
 
 
-    
+
     <script src="https://kit.fontawesome.com/d7f9ab3a29.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"
     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="script.js"></script> -->
 
 </body>
+
 </html>

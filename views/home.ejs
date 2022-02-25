@@ -23,42 +23,73 @@
         <div id="outputContainer">
             <h2 id="listHeading">To Do List </h2>
             <div id="dateContainer">
-                <p id="date">22</p>&nbsp;
-                <p id="month">Feb</p>&nbsp;
-                <p id="year">2022</p>
+                <p id="date">
+                    <%= new Date().getDate();%>
+                </p>&nbsp;
+                <%let monthNames=["Jan", "Feb" , "March" , "April" , "May" , "June" , "July" , "Aug" , "Sep" , "Oct"
+                    , "Nov" , "Dec" ];%>
+                    <p id="month">
+                        <%= monthNames[new Date().getMonth()];%>
+                    </p>&nbsp;
+                    <p id="year">
+                        <%= new Date().getYear();%>
+                    </p>
 
 
             </div>
             <div id="formContainer">
-                <form action="" id="">
+                <form action="/create-task" id="" method="post">
                     <span id="addTask">
-                        <input type="text" id="addToDo" placeholder="Type To-Do List">
+                        <input type="text" id="addToDo" name="addToDo" placeholder="Type To-Do List">
                     </span>
 
                     <span id="taskDetails">
-                        <select name="Category" id="taskCategory">
+                        <select name="taskCategory" id="taskCategory">
                             <option value="" disabled selected>Task Category</option>
                             <option value="personal">Personal</option>
                             <option value="work">Work</option>
                             <option value="school">School</option>
                             <option value="reminder">Reminder</option>
                         </select>
-                        <input type="date" id="dueDate" placeholder="Due Date">
+                        <input placeholder="Due Date" class="textbox-n" name="dueDate" type="text"
+                            onfocus="(this.type='date')" id="dueDate">
                     </span>
+                    <div id="dbAction">
+                        <button type="submit" id="submitButton"><i class="fas fa-plus-square"
+                                id="plusFont"></i></button>
+                    </div>
                 </form>
-                <i class="fas fa-plus-square" id="plusFont"></i>
-                <i class="fa-duotone fa-square-minus"></i>
+                <a href="/del-task" id="" > <button type="submit" id="delButton"><i class="fa-solid fa-square-minus"></i> </button></a>
+                
+
+
 
             </div>
         </div>
         <div id="inputContainer">
             <div id="list">
                 <br>
-                <div class="task"">
-                    <label for="taskName" class="taskLabel"><input type="checkbox" class="taskCheck"> &nbsp; taskdata</label>
-                </div>
+                <%for(let i of todo_data){%>
+                    <div class="task"">
+                        <div class=" taskAnddate"><label for="taskName" class="taskLabel"><input type="checkbox"
+                                class="taskCheck">
+                            <%= i.task%>
+                        </label>
+                        <div class="dateDiv"><i class="fa-solid fa-calendar"></i> &nbsp;<p class="dueDateDisplay">
+                                <%= i.dueDate%>
+                            </p>
+                        </div>
+                    </div>
+                    <h3 class="categoryHeading">
+                        <%= i.category%>
+                    </h3>
+
             </div>
+
+            <%}%>
+
         </div>
+    </div>
     </div>
 
 
@@ -67,9 +98,7 @@
 
 
     <script src="https://kit.fontawesome.com/d7f9ab3a29.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="script.js"></script> -->
+    <script src="../assets/js/script.js"></script>
 
 </body>
 

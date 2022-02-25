@@ -21,7 +21,7 @@ body{
     padding-top: 3%;
 }
 #outputContainer{
-    max-height: 35%;
+    max-height: 110%;
     background: linear-gradient(90deg, rgba(75,94,255,1) 0%, rgba(245,187,255,1) 96%);
 }
 #inputContainer{
@@ -45,9 +45,12 @@ body{
     position: relative;
     text-align: center;
     margin: auto;
+    outline: none;
     /* height: 100%; */
 }
+
 #addToDo{
+    
     padding: 10px;
     border: none;
     box-shadow: 1px 1px 10px lightgray;
@@ -76,6 +79,17 @@ body{
     padding: 3%;
 }
 
+.dueDateDisplay{
+    display: block;
+    margin: 0;
+    font-size: 0.9rem;
+}
+.taskAnddate{
+    transform: translate(0,20%);
+    position: relative;
+    margin-left: 2%;
+    
+}
 
 #dateContainer{
     margin: -3% auto;
@@ -88,23 +102,33 @@ body{
     font-weight: 1000;
     color: yellow;
 }
-
-
-#plusFont:hover{
-    color: whitesmoke;
+.dateDiv{
+    display: flex;
+    font-style: italic;
+    
 }
 
+#plusFont:hover{
+    color: greenyellow;
+}
+#submitButton{
+    background-color: transparent;
+    border: none;
+    margin: auto 5%;
+}
+
+#delButton{
+    background-color: transparent;
+    border: none;
+    margin: auto 5%;
+}
 
 .task{
-    padding: 5%;
     margin:4% auto;
     background-color: white;
-    width:90%;
-    height: 10%;
     box-shadow: 2px 2px 7px lightgray;
     display: flex;
-    flex-wrap: nowrap;
-    /* justify-content: space-around; */
+    justify-content: space-between;
 
 }
 
@@ -112,9 +136,13 @@ body{
     width: 20%;
     align-items: center ;
     font-size: 2.5rem;
-    color: red;
+    color: black;
     margin-bottom: 7%;
 }
+.fa-square-minus:hover{
+    color: red;
+}
+
 #plusFont{
     width: 20%;
     align-items: center ;
@@ -125,9 +153,14 @@ body{
 }
 
 .taskLabel{
-    margin: auto 0;
-    font-size: 1.4rem;
+    font-weight: 1000;
+    text-transform: capitalize;
+    font-size: 1.5rem;
     /* width:70% */
+}
+
+#del-anchor{
+    text-decoration: none;
 }
 
 .task:hover >.fa-trash{
@@ -135,10 +168,12 @@ body{
     
 }
 
-.fa-trash{
-    display: none !important; 
-    padding:5px;
-    margin:auto auto auto 50%;
+.categoryHeading{
+    padding:3%;
+    text-align: center;
+    display: inline-block;
+    justify-content: end;
+    background-color: beige;
 }
 
 

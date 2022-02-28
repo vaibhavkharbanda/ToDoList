@@ -59,7 +59,7 @@
                                 id="plusFont"></i></button>
                     </div>
                 </form>
-                <a href="/del-task" id="" > <button type="submit" id="delButton"><i class="fa-solid fa-square-minus"></i> </button></a>
+                
                 
 
 
@@ -83,8 +83,9 @@
                     <h3 class="categoryHeading">
                         <%= i.category%>
                     </h3>
-
+                    <a href="/del-task/?id=<%=i.id%>"  > <button type="submit" id="delButton"><i class="fa-solid fa-square-minus"></i> </button></a>
             </div>
+            
 
             <%}%>
 

@@ -85,7 +85,7 @@ body{
     font-size: 0.9rem;
 }
 .taskAnddate{
-    transform: translate(0,20%);
+    transform: translate(0,26%);
     position: relative;
     margin-left: 2%;
     
@@ -120,7 +120,7 @@ body{
 #delButton{
     background-color: transparent;
     border: none;
-    margin: auto 5%;
+    /* margin: auto 5%;  */
 }
 
 .task{

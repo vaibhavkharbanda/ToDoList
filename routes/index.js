@@ -5,7 +5,7 @@ const homeController = require('../controllers/home_controller');
 console.log('Router Loaded');
 
 router.get('/',homeController.home);
-
+router.get('/del-task',homeController.del_task);
 
 
 

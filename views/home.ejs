@@ -23,6 +23,7 @@
         <div id="outputContainer">
             <h2 id="listHeading">To Do List </h2>
             <div id="dateContainer">
+                <!-- current date showing in ToDoList -->
                 <p id="date">
                     <%= new Date().getDate();%>
                 </p>&nbsp;
@@ -38,6 +39,7 @@
 
             </div>
             <div id="formContainer">
+                <!-- adding content through form -->
                 <form action="/create-task" id="" method="post">
                     <span id="addTask">
                         <input type="text" id="addToDo" name="addToDo" placeholder="Type To-Do List">
@@ -54,9 +56,8 @@
                         <input placeholder="Due Date" class="textbox-n" name="dueDate" type="text"
                             onfocus="(this.type='date')" id="dueDate">
                     </span>
-                    <div id="dbAction">
-                        <button type="submit" id="submitButton"><i class="fas fa-plus-square"
-                                id="plusFont"></i></button>
+                    <div class="dbAction">
+                        <button type="submit" id="submitButton">ADD TASK<i class="fa-solid fa-plus" id="plusFont"></i></button>
                     </div>
                 </form>
                 
@@ -67,12 +68,14 @@
             </div>
         </div>
         <div id="inputContainer">
+           <!-- Showing the added task which are retrived from Mongodb  -->
             <div id="list">
                 <br>
+                <form action="/del-task" method="GET">
                 <%for(let i of todo_data){%>
                     <div class="task"">
                         <div class=" taskAnddate"><label for="taskName" class="taskLabel"><input type="checkbox"
-                                class="taskCheck">
+                                class="taskCheck" name="<%= i._id%>">
                             <%= i.task%>
                         </label>
                         <div class="dateDiv"><i class="fa-solid fa-calendar"></i> &nbsp;<p class="dueDateDisplay">
@@ -83,13 +86,21 @@
                     <h3 class="categoryHeading">
                         <%= i.category%>
                     </h3>
-                    <a href="/del-task/?id=<%=i.id%>"  > <button type="submit" id="delButton"><i class="fa-solid fa-square-minus"></i> </button></a>
+                    
             </div>
             
-
+            
+            
             <%}%>
+            <!-- deleting the task from DB -->
+            <div class="dbAction"><button type="submit" id="delButton">Delete Task<i class="fa-solid fa-minus"></i></button></div>
+            
+        </form>
 
         </div>
+        
+        
+        
     </div>
     </div>
 

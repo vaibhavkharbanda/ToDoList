@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
 const TodoSchema = new mongoose.Schema({
+
+//creating MongoDb Schema
     task:{
         type:String,
         required:true

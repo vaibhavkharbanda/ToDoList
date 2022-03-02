@@ -2,8 +2,7 @@
 body{
     font-family: 'Raleway', sans-serif;
     background: rgb(203,255,254);
-    /* background-size: 100%; */
-    /* background: linear-gradient(133deg, rgba(203,255,254,1) 0%, rgba(194,220,255,1) 72%); */
+    
 }
 #toDoList{
     background-color: white;
@@ -108,19 +107,44 @@ body{
     
 }
 
-#plusFont:hover{
-    color: greenyellow;
+#submitButton:hover{
+    background-color: #d0a7ff;
+}
+#plusFont{
+    
+    margin: auto 3px;
+    text-align: center;
+    color: white;
+    
 }
 #submitButton{
-    background-color: transparent;
-    border: none;
-    margin: auto 5%;
+    border: none    ;
+    margin: 2px;
+    padding: 7px;
+    box-shadow: 2px 2px 10px grey;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
 }
+/* -------------------------- */
+
+/* --------Bottom Output Container---------- */
 
 #delButton{
-    background-color: transparent;
+    display: flex;
+    justify-content: center;
     border: none;
-    /* margin: auto 5%;  */
+    margin: auto;
+    padding: 7px;
+    box-shadow: 2px 2px 10px grey;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+}
+
+
+#delButton:hover{
+    background-color: #d0a7ff;
 }
 
 .task{
@@ -131,26 +155,14 @@ body{
     justify-content: space-between;
 
 }
-
-.fa-square-minus{
-    width: 20%;
-    align-items: center ;
-    font-size: 2.5rem;
-    color: black;
-    margin-bottom: 7%;
-}
-.fa-square-minus:hover{
-    color: red;
+.fa-minus{
+    margin: auto 3px;
+    text-align: center;
+    color: white;
 }
 
-#plusFont{
-    width: 20%;
-    align-items: center ;
-    font-size: 2.5rem;
-    color: black;
-    margin-bottom: 7%;
-    
-}
+
+
 
 .taskLabel{
     font-weight: 1000;
@@ -175,5 +187,6 @@ body{
     justify-content: end;
     background-color: beige;
 }
+/* --------------- */
 
 

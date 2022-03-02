@@ -1,4 +1,5 @@
 @media only screen and (max-width: 600px){
+    /* responsive css for mobile */
     #toDoList{
         transform: translate(0, 2%);
         width: 80vw;
@@ -17,5 +18,9 @@
 
     .task{
         min-height: 20%;
+    }
+    .taskLabel{
+        font-weight: 700;
+        font-size: 1.2rem;
     }
 }
